@@ -1,32 +1,34 @@
-<div id="<%= dom_id friend %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">First name:</strong>
-    <%= friend.first_name %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Last name:</strong>
-    <%= friend.last_name %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Email:</strong>
-    <%= friend.email %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Phone:</strong>
-    <%= friend.phone %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Twitter:</strong>
-    <%= friend.twitter %>
-  </p>
-
-  <% if action_name != "show" %>
-    <%= link_to "Show this friend", friend, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Edit this friend", edit_friend_path(friend), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
+<div id="<%= dom_id friend %>" class="flex items-center justify-center">
+  <table class="min-w-full bg-white rounded-xl">
+    <thead class="border-b border-blue-gray-200">
+      <tr class="bg-blue-gray-100 text-gray-700">
+        <th class="py-3 px-4 text-left font-medium">First name</th>
+        <th class="py-3 px-4 text-left font-medium">Last name</th>
+        <th class="py-3 px-4 text-left font-medium">E-mail</th>
+        <th class="py-3 px-4 text-left font-medium">Phone</th>
+        <th class="py-3 px-4 text-left font-medium">Twitter</th>
+      </tr>
+    </thead>
+    <tbody class="text-blue-gray-900 divide-y divide-blue-gray-200">
+      <%= friends.each do |friend| %>
+        <tr class="border-b border-blue-gray-200">
+          <td class="py-3 px-4">
+            <%= friend.first_name%>
+          </td>
+          <td class="py-3 px-4">
+            <%= friend.last_name%>
+          </td>
+          <td class="py-3 px-4">
+            <%= friend.e_mail%>
+          </td>
+          <td class="py-3 px-4">
+            <%= friend.phone%>
+          </td>
+          <td class="py-3 px-4">
+            <%= friend.twitter%>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
