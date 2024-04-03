@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Friend App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  </head>
+
+  <body>
+    <main class="max-w-screen w-full h-screen bg-zinc-900 flex flex-col">
+      <%= render "home/header" %>
+      <main class="flex-1 m-16">
+        <%= yield %>
+      </main>
+      <footer class="flex items-center justify-center w-full p-2 bg-red-700">
+        <span class="text-white">This kinda looks like angular</span>
+      </footer>
+    </main>
+  </body>
+</html>
