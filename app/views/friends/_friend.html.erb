@@ -1,6 +1,7 @@
 <tr class="border-b border-blue-gray-200">
-  <td class="py-3 px-4"><%= friend.first_name %></td>
-  <td class="py-3 px-4"><%= friend.last_name %></td>
+  <td class="py-3 px-4">
+    <%= link_to friend.first_name + ' ' + friend.last_name, friend, class:"hover:underline" %>
+  </td>
   <td class="py-3 px-4"><%= friend.email %></td>
   <td class="py-3 px-4"><%= friend.phone %></td>
   <td class="py-3 px-4"><%= friend.twitter %></td>
