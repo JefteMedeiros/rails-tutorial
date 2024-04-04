@@ -1,34 +1,8 @@
-<div id="<%= dom_id friend %>" class="flex items-center justify-center">
-  <table class="min-w-full bg-white rounded-xl">
-    <thead class="border-b border-blue-gray-200">
-      <tr class="bg-blue-gray-100 text-gray-700">
-        <th class="py-3 px-4 text-left font-medium">First name</th>
-        <th class="py-3 px-4 text-left font-medium">Last name</th>
-        <th class="py-3 px-4 text-left font-medium">E-mail</th>
-        <th class="py-3 px-4 text-left font-medium">Phone</th>
-        <th class="py-3 px-4 text-left font-medium">Twitter</th>
-      </tr>
-    </thead>
-    <tbody class="text-blue-gray-900 divide-y divide-blue-gray-200">
-      <%= friends.each do |friend| %>
-        <tr class="border-b border-blue-gray-200">
-          <td class="py-3 px-4">
-            <%= friend.first_name%>
-          </td>
-          <td class="py-3 px-4">
-            <%= friend.last_name%>
-          </td>
-          <td class="py-3 px-4">
-            <%= friend.e_mail%>
-          </td>
-          <td class="py-3 px-4">
-            <%= friend.phone%>
-          </td>
-          <td class="py-3 px-4">
-            <%= friend.twitter%>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+<tr class="border-b border-blue-gray-200">
+  <td class="py-3 px-4"><%= friend.first_name %></td>
+  <td class="py-3 px-4"><%= friend.last_name %></td>
+  <td class="py-3 px-4"><%= friend.email %></td>
+  <td class="py-3 px-4"><%= friend.phone %></td>
+  <td class="py-3 px-4"><%= friend.twitter %></td>
+</tr>
+
