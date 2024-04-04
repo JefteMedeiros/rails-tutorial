@@ -1,13 +1,11 @@
 <div class="w-full">
   <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <div class="p-4 bg-white rounded-lg flex flex-col" id="notice">
+      <p class="font-medium">Alert<p>
+      <p><%= notice %></p>
+    </div>
   <% end %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="text-4xl font-medium text-left leading-snug font-serif text-white">Friends</h1>
-    <%= link_to "New friend", new_friend_path, class: "inline-block mt-3 underline text-white" %>
-  </div>
-
+  <h1 class="text-4xl font-medium text-left leading-snug font-serif text-white">Friends</h1>
   <div id="friends" class="min-w-full flex items-center justify-center">
     <table class="min-w-full bg-white rounded-xl">
       <thead class="border-b border-blue-gray-200">
@@ -23,4 +21,5 @@
       </tbody>
     </table>
   </div>
+  <%= link_to "New friend", new_friend_path, class: "block underline text-white mt-2 text-right" %>
 </div>
