@@ -6,20 +6,24 @@
     </div>
   <% end %>
   <h1 class="text-4xl font-medium text-left leading-snug font-serif text-white">Friends</h1>
-  <div id="friends" class="min-w-full flex items-center justify-center">
-    <table class="min-w-full bg-white rounded-xl">
-      <thead class="border-b border-blue-gray-200">
-        <tr class="bg-blue-gray-100 text-gray-700">
-          <th class="py-3 px-4 text-left font-medium">Name</th>
-          <th class="py-3 px-4 text-left font-medium">E-mail</th>
-          <th class="py-3 px-4 text-left font-medium">Phone</th>
-          <th class="py-3 px-4 text-left font-medium">Twitter</th>
-        </tr>
-      </thead>
-      <tbody class="text-blue-gray-900 divide-y divide-blue-gray-200">
-        <%= render @friends %>
-      </tbody>
-    </table>
-  </div>
-  <%= link_to "New friend", new_friend_path, class: "block underline text-white mt-2 text-right" %>
+  <% if @friends.any? %>
+    <div id="friends" class="min-w-full flex items-center justify-center">
+      <table class="min-w-full bg-white rounded-xl">
+        <thead class="border-b border-blue-gray-200">
+          <tr class="bg-blue-gray-100 text-gray-700">
+            <th class="py-3 px-4 text-left font-medium">Name</th>
+            <th class="py-3 px-4 text-left font-medium">E-mail</th>
+            <th class="py-3 px-4 text-left font-medium">Phone</th>
+            <th class="py-3 px-4 text-left font-medium">Twitter</th>
+          </tr>
+        </thead>
+        <tbody class="text-blue-gray-900 divide-y divide-blue-gray-200">
+          <%= render @friends %>
+        </tbody>
+      </table>
+    </div>
+  <% else %>
+    <p class="text-white">There are no friends to show.</p>
+  <% end %>
+  <%= link_to "New friend", new_friend_path, class: "block underline text-white mt-4 text-left" %>
 </div>
