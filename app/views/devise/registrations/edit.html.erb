@@ -1,5 +1,4 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<h1 class="w-full text-4xl font-medium text-left leading-snug font-serif">Edit <%= resource_name.to_s.humanize %></h1>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -35,6 +34,91 @@
     <%= f.submit "Update" %>
   </div>
 <% end %>
+
+
+
+
+<div class="flex flex-col gap-8 w-full mt-6 mr-0 mb-0 ml-0 relative">
+    <div class="relative">
+      <%= form.label :first_name, class:"bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute" %>
+      <%= 
+        form.text_field :first_name,
+        placeholder: "Max", 
+        class:"border placeholder-gray-400 focus:outline-none
+          focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+          border-gray-300 rounded-md
+        " 
+      %>
+    </div>
+    <div class="relative">
+      <%= form.label :last_name, class:"bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute" %>
+      <%= 
+        form.text_field :last_name, 
+        placeholder: "Oselola", 
+        class:"border placeholder-gray-400 focus:outline-none
+          focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+          border-gray-300 rounded-md
+        " 
+      %>
+    </div>
+    <div class="relative">
+      <%= form.label :email, class:"bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute" %>
+      <%= 
+        form.text_field :email,
+        placeholder: "email@example.com",  
+        class:"border placeholder-gray-400 focus:outline-none
+          focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+          border-gray-300 rounded-md
+        " 
+      %>
+    </div>
+    <div class="relative">
+      <%= form.label :Phone, class:"bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute" %>
+      <%= 
+        form.text_field :phone,
+        placeholder: "555555555",   
+        class:"border placeholder-gray-400 focus:outline-none
+          focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+          border-gray-300 rounded-md
+        " 
+      %>
+    </div>
+    <div class="relative">
+      <%= form.label :twitter, class:"bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute" %>
+      <%= 
+        form.text_field :twitter,
+        placeholder: "@twitter", 
+        class:"border placeholder-gray-400 focus:outline-none
+          focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+          border-gray-300 rounded-md
+        " 
+      %>
+    </div>
+    <div class="relative self-end">
+      <%= form.submit class: "bg-red-700 px-4 py-3 rounded-md hover:cursor-pointer text-white focus:ring-2 focus:ring-offset-2 focus:ring-red-700 outline-none transition-all hover:bg-red-800" %>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h3>Cancel my account</h3>
 
